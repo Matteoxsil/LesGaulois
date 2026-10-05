@@ -18,5 +18,15 @@ public class Gaulois {
 		return "Le gaulois "+ nom + " : ";
 	}
 	
+	
 
+	@Override
+	public String toString() {
+		return "Gaulois [nom=" + nom + ", force=" + force + "]";
+	}
+	void main(String[] args) {
+		Gaulois asterix = new Gaulois("Astérix", 8);
+		System.out.println(asterix);
+	}
+	
 }
