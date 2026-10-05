@@ -24,6 +24,7 @@ public class Romain {
 	}
 	public void recevoirCoup(int i) {
 		force -= i;
+		System.out.println(force);
 		if(force == 0) {
 			parler("J'abandonne !");
 		}
