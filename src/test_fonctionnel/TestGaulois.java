@@ -1,6 +1,7 @@
 package test_fonctionnel;
 
 import personnages.Gaulois;
+import personnages.Romain;
 
 public class TestGaulois {
 	void main(String[] args) {
@@ -10,5 +11,13 @@ public class TestGaulois {
 				
 		obelix.parler("Bonjour " + asterix.getNom() + ". ça te dirai d'aller chasser des sangliers ?");
 		asterix.parler("Oui très bonne idée.");
+		
+		Romain minus = new Romain("Minus", 6);
+		System.out.println("dans la foret " + asterix + " et " + obelix + " tombe nez à nez sur le romain "+ minus);
+		
+		for(int i = 0; i < 3; i++) {
+			asterix.frapper(minus);
+		}
+		
 	}
 }

@@ -22,8 +22,15 @@ public class Gaulois {
 
 	@Override
 	public String toString() {
-		return "Gaulois [nom=" + nom + ", force=" + force + "]";
+		return nom;
 	}
+	
+	public void frapper(Romain romain) {
+		
+		System.out.println(nom + "envoie un grand coup dans la mâchoire de" + romain.getNom());
+		romain.recevoirCoup(force/3);
+		}
+	
 	void main(String[] args) {
 		Gaulois asterix = new Gaulois("Astérix", 8);
 		System.out.println(asterix);
