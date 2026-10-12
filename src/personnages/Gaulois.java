@@ -1,13 +1,44 @@
 package personnages;
 
+import village_gaulois.Village;
+
 public class Gaulois {
 	private String nom;
 	private int force;
 	private int effetPotion = 1;
-	
+	private Village village = null;
 	public Gaulois(String nom, int force) {
 		this.nom = nom;
 		this.force = force;
+	}
+	
+	private String getSituationVillage() {
+		String situation_pro;
+		if (village == null) {
+			situation_pro = "je voyage de village en villages...";
+			
+			
+			}
+		else {
+			if (village.getChef() == this) {
+				situation_pro = " je suis chef du village " + village.getNom();
+				
+			}
+			else {
+				situation_pro = "je suis habitant du village " + village.getNom();
+			}
+		}
+		return situation_pro;
+	}
+	
+	public void sePresenter() {
+		String situation_pro = getSituationVillage();
+		parler("bonjour, je m'appelle "+ nom +" et "+ situation_pro);
+		
+	}
+	public void setVillage(Village village) {
+		this.village = village;
+		
 	}
 	public String getNom() {
 		return nom;
